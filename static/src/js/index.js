@@ -6,4 +6,5 @@ const $ = window.$;
 require('bootstrap');
 
 $(() => {
+
 });
