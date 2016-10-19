@@ -19,7 +19,7 @@
     "watch:lint": "onchange static/src/js/**/*.js -- npm run lint",
     "watch:js": "watchify -t [ babelify --presets [ es2015 stage-1 ] ] -t envify static/src/js/index.js -o 'exorcist static/dist/js/site.js.map > static/dist/js/site.js' -dv",
     "watch:css": "onchange static/src/less/**/*.less -- npm run build:css",
-    "watch": "concurrently --raw \"npm run watch:lint\" \"npm run watch:lint\" \"npm run watch:babel\" \"npm run watch:js\" \"npm run watch:css\"",
+    "watch": "concurrently --raw \"npm run watch:lint\" \"npm run watch:babel\" \"npm run watch:js\" \"npm run watch:css\"",
     "lint": "eslint static/src/**/**/*.js",
     "test": "mocha --recursive --compilers js:babel-register static/src/tests/index.js"
   },
